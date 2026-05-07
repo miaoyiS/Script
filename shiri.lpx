@@ -1,0 +1,12 @@
+#!name=识日
+#!desc=解锁识日App永久会员及多币
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/48/15/63/4815630d-6196-3ca2-e0b4-7b6603682cb8/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/350x350.png
+#!author=WeiGiegie
+#!homepage=https://t.me/GieGie777
+#!app=https://apps.apple.com/sg/app/%E8%AF%86%E6%97%A5-%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0-%E6%97%A5%E8%AF%AD%E8%AF%8D%E5%85%B8-%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E8%AF%AD-%E6%97%A5%E8%AF%AD%E7%BF%BB%E8%AF%91/id6738333132
+
+[Script]
+http-response ^http://shiri\.jingqueyun\.com script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/shiri.js, requires-body=true, tag=识日脚本
+
+[Mitm]
+hostname = shiri.jingqueyun.com
