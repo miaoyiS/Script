@@ -2,6 +2,11 @@
 // @name         斗鱼关注动态空响应
 // @desc         拦截关注动态接口，直接返回空列表（无方法判断）
 // @type         http-response
+// @pattern      ^https?://apiv3\.douyucdn\.cn/mgapi/yubanc/api/feed/followedUserFeedList/v2\?
+// ==Loon==
+// @name         斗鱼关注动态空响应（零上传）
+// @desc         拦截关注动态接口，本地返回空列表，无任何网络流量
+// @type         http-request
 // @pattern      ^https?://apiv3\.douyucdn\.cn/mgapi/yubanc/api/feed/followedUserFeedList/v2\?client_sys=ios
 // ==/Loon==
 
@@ -17,4 +22,13 @@ const fakeBody = JSON.stringify({
         list: []
     }
 });
-$done({ body: fakeBody });
+
+$done({
+    response: {
+        status: 200,
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: fakeBody
+    }
+});
