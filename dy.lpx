@@ -1,6 +1,6 @@
 #!name=斗鱼双接口空响应（零上传）
 #!desc=拦截关注动态及广告网关，本地返回空数据
 [Script]
-http-request ^https?://(apiv3\.douyucdn\.cn/mgapi/yubanc/api/feed/followedUserFeedList/v2\?client_sys=ios|rtbapi\.douyucdn\.cn/japi/dyadx/gateway/app/getinfo\?client_sys=ios) script-path=https://raw.githubusercontent.com/你的用户名/仓库名/main/douyu-empty.js, tag=斗鱼动态广告拦截, requires-body=0
+http-request ^https?://(apiv3\.douyucdn\.cn/mgapi/yubanc/api/feed/followedUserFeedList/v2\?client_sys=ios|rtbapi\.douyucdn\.cn/japi/dyadx/gateway/app/getinfo\?client_sys=ios) script-path=https://raw.githubusercontent.com/miaoyiS/Script/refs/heads/main/dy.js, tag=斗鱼动态广告拦截, requires-body=0
 [Mitm]
 hostname = apiv3.douyucdn.cn, rtbapi.douyucdn.cn
